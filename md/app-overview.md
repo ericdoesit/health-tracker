@@ -7,7 +7,7 @@
 
 | File | Purpose |
 |------|---------|
-| `bodybuilding-tracker.html` | Entire app — HTML + CSS + JS in one file |
+| `health-tracker.html` | Entire app — HTML + CSS + JS in one file |
 | `sheets-sync.js` | Google Apps Script (deployed as Web App). Paste into script.google.com |
 | `icons/dumbbell_11421684.png` | Workout nav icon (black on white PNG) |
 | `icons/cutlery_3141448.png` | Log Food nav icon (black on white PNG) |
@@ -22,7 +22,7 @@
 ## Architecture
 
 ```
-bodybuilding-tracker.html
+health-tracker.html
 │
 ├── CSS (design tokens, components)
 ├── HTML (6 screens, 1 nav)
@@ -211,7 +211,7 @@ const WORKOUTS = [ /* 5 days */ ];
 ---
 
 ## Adding to iPhone Home Screen
-1. Open `bodybuilding-tracker.html` in Safari
+1. Open `health-tracker.html` in Safari
 2. Tap Share → Add to Home Screen
 3. App runs full-screen, no browser chrome
 4. Camera (barcode scanner) requires Safari — Chrome on iOS doesn't support BarcodeDetector

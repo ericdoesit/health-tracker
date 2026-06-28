@@ -122,6 +122,65 @@ Track weekly average weight (not daily). Adjust if needed:
 
 ---
 
+## Macro Reduction Priority Order (Caloric Deficit)
+
+When reducing calories, follow this sequence — carbs are protected longest, protein is cut last:
+
+1. **Decrease carbs** if: carbs >1g/lb AND fat <0.3g/lb
+2. **Decrease fat** if: carbs <1g/lb AND fat >0.7g/lb
+3. **Decrease protein** (last resort) if: protein >1.3g/lb AND carbs <1g/lb AND fat <0.3g/lb
+
+**Late-prep performance hack (same-calorie re-partition):** If no calorie cut is needed but gym performance is declining — lower protein to 1g/lb and redistribute those exact calories as carbohydrate. Same total, better training fuel.
+
+**Trace fats** (very low fat) are acceptable for short durations in late prep to protect carbs.
+
+---
+
+## Refeed and Diet Break Protocols
+
+**Refeed (24–72 hours):**
+- Raise calories 20–30% above current via carbohydrates only
+- Protein and fat stay the same or slightly reduce; offset with carbs
+- Same food sources used during prep
+- Training and cardio unchanged (if leg fatigue is severe, steps only)
+
+**Diet Break (7–14 days):**
+- Raise to full maintenance (20–30% kcal increase) via carbohydrates
+- Protein and fat unchanged; same food sources
+- Training: cut work sets by 50%; same exercises; same loads at 1 RIR
+- Cardio stays the same unless fatigue is very high
+
+---
+
+## Fat Loss Decision Tree (Stall Protocol)
+
+Before changing anything, confirm >7–14 days of adherence.
+
+1. Are you visually leaner AND scale/calipers moving?
+   - **Yes, 0.5–1.5% body weight/week loss** → no change needed
+   - **Yes but stalled** → check for confounders first (poor sleep, stress, water retention from training, GI changes, altered routine, weigh-in time)
+2. Is there room for more deficit (calories not already rock-bottom, cardio not maxed)?
+   - **Yes** → Calories first (10% kcal reduction, one macro at a time per priority order above)
+   - **No** → Cardio next → Fat loss agents last
+
+**Cardio escalation order:**
+1. Add 2–4k steps/day
+2. Add 10–15 min/session or 1–2 extra sessions/week
+3. Convert NEAT to structured cardio
+4. Rule: cardio sessions should not exceed number of weight training sessions
+
+---
+
+## Metabolic Agents (from Source PDFs)
+
+Used in Eric's stack beyond food/macro management:
+- **Tirzepatide (GLP-1/GIP)** — hunger suppression; risk is under-eating without realizing it. Log every meal.
+- **HGH (0.25–0.5mg EOD)** — FFA mobilization, GH/IGF-1 axis
+- **Telmisartan (ARB)** — PPAR agonist; regulates lipid and glucose metabolism genes. Not just a blood pressure drug.
+- **Metformin + Berberine** — glucose disposal agents; block CHO absorption and improve glucose partitioning
+
+---
+
 ## BIA Scale Notes (Withings)
 The scale measures lean mass via bioelectrical impedance, which is highly sensitive to hydration. Rules for consistent readings:
 - Always weigh **morning, fasted, after drinking 16 oz water**
