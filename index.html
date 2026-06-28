@@ -1149,14 +1149,14 @@ function saveState() {
 
 /* ── INIT ── */
 window.addEventListener('DOMContentLoaded', () => {
-  initHome();
-  renderWorkoutDay(0);
-  renderMacros();
-  loadSettings();
-  loadProgressLog();
-  updateHomeSummary();
-  renderMacroSnapshot();
-  initWithingsUI();
+  try { initHome(); } catch(e) {}
+  try { renderWorkoutDay(0); } catch(e) {}
+  try { renderMacros(); } catch(e) {}
+  try { loadSettings(); } catch(e) {}
+  try { loadProgressLog(); } catch(e) {}
+  try { updateHomeSummary(); } catch(e) {}
+  try { renderMacroSnapshot(); } catch(e) {}
+  try { initWithingsUI(); } catch(e) {}
 });
 
 /* ── HOME ── */
@@ -1967,7 +1967,7 @@ function renderFoodLog() {
   const list = document.getElementById('food-log-list');
 
   let totCal = 0, totPro = 0, totCarb = 0, totFat = 0;
-  allLogs.forEach(l => { totCal += l.cal; totPro += l.protein; totCarb += l.carbs; totFat += l.fat; });
+  allLogs.forEach(l => { totCal += (l.cal || 0); totPro += (l.protein || 0); totCarb += (l.carbs || 0); totFat += (l.fat || 0); });
   updateFoodTotals(Math.round(totCal), +totPro.toFixed(1), +totCarb.toFixed(1), +totFat.toFixed(1));
 
   list.innerHTML = MEALS.map(meal => {
@@ -2064,6 +2064,8 @@ function goScreen(name) {
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('screen-' + name).classList.add('active');
   document.getElementById('nav-' + name).classList.add('active');
+  if (name === 'home') renderMacroSnapshot();
+  if (name === 'food') renderFoodLog();
 }
 
 // Reset weekly sessions every Monday
