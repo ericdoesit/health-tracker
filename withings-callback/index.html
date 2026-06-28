@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build Tracker — Withings Connect</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #151515; color: #F1F1F1;
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 24px;
+    }
+    .box { text-align: center; max-width: 360px; width: 100%; }
+    .icon { font-size: 56px; margin-bottom: 16px; }
+    h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    p  { font-size: 14px; color: #999; line-height: 1.6; }
+    .spinner {
+      width: 40px; height: 40px; border: 3px solid #252525;
+      border-top-color: #049D33; border-radius: 50%;
+      animation: spin 0.8s linear infinite; margin: 0 auto 20px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .error { color: #D03737; }
+  </style>
+</head>
+<body>
+<div class="box" id="box">
+  <div class="spinner" id="spinner"></div>
+  <h1 id="title">Connecting…</h1>
+  <p id="msg">Exchanging authorization with Withings. This takes a moment.</p>
+</div>
+
+<script>
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwHyd_UBOJAuYe6ux-j2NO79O-vIuf-nUo57xlLlZB9fWur-uATf4dXt8Zj_F9LAnj5mQ/exec';
+
+  const params      = new URLSearchParams(location.search);
+  const code        = params.get('code');
+  const state       = params.get('state');
+  const redirectUri = location.origin + location.pathname;
+
+  function show(icon, title, msg, isError) {
+    document.getElementById('spinner').style.display = 'none';
+    document.getElementById('box').innerHTML =
+      `<div class="icon">${icon}</div>
+       <h1 ${isError ? 'class="error"' : ''}>${title}</h1>
+       <p style="margin-top:8px">${msg}</p>`;
+  }
+
+  if (!code || state !== 'withings') {
+    show('⚠️', 'Unexpected', 'No authorization code found. Close this tab and try connecting again from the Build Tracker app.', true);
+  } else {
+    fetch(`${APPS_SCRIPT_URL}?action=exchange_withings&code=${encodeURIComponent(code)}&redirect_uri=${encodeURIComponent(redirectUri)}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.status === 'ok') {
+          show('✓', 'Withings Connected', 'Your scale is linked. Close this tab and return to the Build Tracker app — tap <strong style="color:#F1F1F1">Sync Now</strong> on the Progress tab after each weigh-in.', false);
+        } else {
+          show('✗', 'Connection Failed', (data.message || 'Unknown error') + '<br><br>Close this tab and try again.', true);
+        }
+      })
+      .catch(err => {
+        show('✗', 'Network Error', err.toString() + '<br><br>Close this tab and try again.', true);
+      });
+  }
+</script>
+</body>
+</html>
