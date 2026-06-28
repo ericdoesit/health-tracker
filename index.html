@@ -56,7 +56,7 @@ body {
   display: none;
   flex: 1;
   overflow-y: auto;
-  padding: calc(env(safe-area-inset-top, 0px) + 20px) 20px calc(54px + min(env(safe-area-inset-bottom, 0px), 12px) + 20px);
+  padding: calc(env(safe-area-inset-top, 0px) + 20px) 20px calc(54px + env(safe-area-inset-bottom, 0px) + 20px);
   -webkit-overflow-scrolling: touch;
 }
 .screen.active { display: block; }
@@ -65,8 +65,8 @@ body {
 .nav {
   position: fixed;
   bottom: 0; left: 0; right: 0;
-  height: calc(54px + min(env(safe-area-inset-bottom, 0px), 12px));
-  padding-bottom: min(env(safe-area-inset-bottom, 0px), 12px);
+  height: calc(54px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   background: var(--bg2);
   border-top: 1px solid var(--border);
   display: flex;
