@@ -10,25 +10,32 @@
 
 ---
 
-## Phase 1 — Cut
-**Goal:** 179 lb → 167 lb at ~10% BF | Rate: ~0.9 lb/week | Duration: ~12 weeks
+## Phase 1 — Cut (Revised)
+**Goal:** 179 lb → 167 lb at ~10% BF | Rate: ~0.75–1 lb/week (fat only) | Duration: ~12–16 weeks
+
+**Revised June 2026:** Initial 2,100 cal protocol was too aggressive — lifts were dropping, indicating LBM loss. Raised to 2,400 cal + 7,000–8,000 steps/day (walking only, no structured cardio). Tirzepatide handles appetite suppression; the step target creates the additional deficit without cortisol cost.
 
 | Macro | Daily | Training Day | Rest Day |
 |-------|-------|-------------|----------|
-| Calories | 2,100 | 2,100 | 2,080 |
+| Calories | 2,400 | ~2,435 | ~2,375 |
 | Protein | 215g | 215g | 215g |
-| Carbs | 195g | 225g | 160g |
-| Fat | 65g | 50g | 75g |
+| Carbs | 239g | 270g | 210g |
+| Fat | 65g | 55g | 75g |
 
 **Rationale:**
-- Protein at 1.2g/lb — evidence-based upper range for lean mass retention on a cut. Goes no higher because beyond 1.2g/lb shows diminishing returns and displaces carbs needed for training performance.
-- Fat minimum 0.36g/lb (65g) — floor required to maintain testosterone and hormone production. Going lower on a cut risks hormonal suppression.
-- Carbs fill remaining calories. Higher on training days (carb cycling) to fuel performance and spare protein. Lower on rest days.
-- Deficit: ~400 cal/day = ~0.8–1.0 lb/week loss at 2,500 TDEE.
+- Maintenance ~2,860 cal (16 cal/lb at 179 lb). 2,400 = ~16% deficit (~460 cal/day). With 7,000–8,000 steps adding ~300 cal burn, effective deficit ~750 cal/day = ~0.75–1 lb/week.
+- Protein held at 215g throughout — does NOT drop late in cut. Muscle catabolism risk is highest at lowest BF; protein goes up, not down.
+- Fat floor 65g (0.36g/lb) maintained for testosterone and hormone production.
+- Extra carbs on training days fuel lifts. If bar weight is holding or going up, the protocol is working.
+- No structured cardio — Tirzepatide + steps handles the deficit. Stacking cardio on top would create a cortisol trap (chronic cortisol → water retention masking fat loss).
 
-**Lean mass protection rules:**
-- If losing >1.5 lb/week for 2+ weeks → add 100 cal (raise carbs, not fat)
-- If strength drops >10% on main lifts → cut cardio before cutting calories
+**Primary progress signal:** Lift performance, not scale weight.
+- Lifts holding or improving = retaining muscle, deficit is appropriate
+- Lifts dropping = deficit is too aggressive, raise carbs by 25–30g
+
+**Adjustment rules:**
+- If losing >1.25 lb/week for 2+ weeks → add 25g carbs on training days
+- If losing <0.5 lb/week for 2+ weeks → add 1,000–2,000 steps/day before cutting food
 - Deload every 4th week: same weight, 40% less volume
 
 **Tirzepatide note:** GLP-1 strongly suppresses hunger. Risk is eating well below 2,100 without realizing it. Log every meal in the app to confirm you're actually hitting the target — not just feeling full.

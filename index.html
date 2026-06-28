@@ -666,6 +666,7 @@ select option { background: var(--bg3); }
     <div class="stat-row"><span class="stat-key">Fat near training</span><span class="stat-val red">Minimize</span></div>
     <div class="stat-row"><span class="stat-key">Water target</span><span class="stat-val">100–130 oz</span></div>
     <div class="stat-row"><span class="stat-key">Creatine</span><span class="stat-val green">5g / day</span></div>
+    <div class="stat-row"><span class="stat-key">Daily steps</span><span class="stat-val green">7,000–8,000 (no cardio)</span></div>
   </div>
 
   <!-- Supplements -->
@@ -815,9 +816,12 @@ select option { background: var(--bg3); }
   <!-- Periodization -->
   <div class="section-head" style="margin-top:8px"><span class="section-head__label">Periodization</span><div class="section-head__line"></div></div>
   <div class="card">
-    <div class="stat-row"><span class="stat-key">Phase 1: Cut</span><span class="stat-val red">Wks 1–12 · NOW</span></div>
-    <div class="stat-row"><span class="stat-key">Start → Target</span><span class="stat-val">199 lb → ~167 lb</span></div>
-    <div class="stat-row"><span class="stat-key">BF Target</span><span class="stat-val">16% → 10%</span></div>
+    <div class="stat-row"><span class="stat-key">Phase 1: Cut</span><span class="stat-val red">NOW</span></div>
+    <div class="stat-row"><span class="stat-key">Start → Target</span><span class="stat-val">179 lb → ~167 lb</span></div>
+    <div class="stat-row"><span class="stat-key">BF Target</span><span class="stat-val">15% → 10%</span></div>
+    <div class="stat-row"><span class="stat-key">Calories</span><span class="stat-val">2,400 (moderate deficit)</span></div>
+    <div class="stat-row"><span class="stat-key">NEAT target</span><span class="stat-val green">7,000–8,000 steps/day</span></div>
+    <div class="stat-row"><span class="stat-key">Rate of loss</span><span class="stat-val">0.75–1 lb/wk fat only</span></div>
     <div class="divider"></div>
     <div class="stat-row"><span class="stat-key">Phase 2: Transition</span><span class="stat-val yellow">Wks 13–14</span></div>
     <div class="stat-row"><span class="stat-key">Calories</span><span class="stat-val">~2,500 (maintenance)</span></div>
@@ -1118,7 +1122,7 @@ const WORKOUTS = [
 
 const PHASES = {
   // Cut: 2100 cal · 215g P (1.2g/lb) · 65g F (0.36g/lb min for hormones) · 195g C (remainder)
-  cut:        { cal: 2100, protein: 215, fat: 65,  carbs: 195, trainCarbs: 225, trainFat: 50, restCarbs: 160, restFat: 75 },
+  cut:        { cal: 2400, protein: 215, fat: 65,  carbs: 239, trainCarbs: 270, trainFat: 55, restCarbs: 210, restFat: 75 },
   // Transition: 2500 cal · 200g P · 75g F · 275g C
   transition: { cal: 2500, protein: 200, fat: 75,  carbs: 275, trainCarbs: 305, trainFat: 65, restCarbs: 240, restFat: 85 },
   // Lean Bulk: 2800 cal · 185g P (1.1g/lb at ~167lb) · 65g F · 362g C
