@@ -27,7 +27,7 @@
   --orange: #d35b2c;
   --border: rgba(241,241,241,0.12);
   --radius: 16px;
-  --nav-h: 72px;
+  --nav-h: 58px;
   --safe-b: env(safe-area-inset-bottom, 0px);
 }
 
@@ -56,7 +56,7 @@ body {
   display: none;
   flex: 1;
   overflow-y: auto;
-  padding: calc(env(safe-area-inset-top, 0px) + 20px) 20px calc(72px + env(safe-area-inset-bottom, 0px) + 20px);
+  padding: calc(env(safe-area-inset-top, 0px) + 20px) 20px calc(58px + env(safe-area-inset-bottom, 0px) + 20px);
   -webkit-overflow-scrolling: touch;
 }
 .screen.active { display: block; }
@@ -65,7 +65,7 @@ body {
 .nav {
   position: fixed;
   bottom: 0; left: 0; right: 0;
-  height: calc(72px + env(safe-area-inset-bottom, 0px));
+  height: calc(58px + env(safe-area-inset-bottom, 0px));
   padding-bottom: env(safe-area-inset-bottom, 0px);
   background: var(--bg2);
   border-top: 1px solid var(--border);
@@ -1140,7 +1140,6 @@ function loadState() {
   try { return JSON.parse(localStorage.getItem('bb_state') || '{}'); } catch { return {}; }
 }
 function saveState() {
-  if (DEMO_MODE) return;
   localStorage.setItem('bb_state', JSON.stringify(state));
 }
 
@@ -1760,7 +1759,8 @@ async function startScanner() {
     await video.play();
     startDetecting(video);
   } catch {
-    showToast('Camera denied — use Type Barcode or Add Manually');
+    showToast('Camera access denied — enter barcode manually');
+    showBarcodeEntry();
   }
 }
 
