@@ -1125,6 +1125,11 @@ const PHASES = {
   bulk:       { cal: 2800, protein: 185, fat: 65,  carbs: 362, trainCarbs: 410, trainFat: 55, restCarbs: 310, restFat: 75 },
 };
 
+/* ── UTILS ── */
+function esc(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
 /* ── STATE ── */
 let state = loadState();
 let currentDay = 0;
@@ -1965,8 +1970,8 @@ function renderFoodLog() {
       : items.map(l => `
           <div class="food-log-item">
             <div class="food-log-item__info">
-              <div class="food-log-item__name">${l.name}</div>
-              <div class="food-log-item__macros">${l.serving} · ${l.protein}g P · ${l.carbs}g C · ${l.fat}g F</div>
+              <div class="food-log-item__name">${esc(l.name)}</div>
+              <div class="food-log-item__macros">${esc(l.serving)} · ${l.protein}g P · ${l.carbs}g C · ${l.fat}g F</div>
             </div>
             <div class="food-log-item__cal">${l.cal}</div>
             <button class="food-del-btn" onclick="deleteFoodEntry(${l.id})">
