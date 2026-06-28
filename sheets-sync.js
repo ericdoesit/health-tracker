@@ -2,7 +2,7 @@
  * BUILD TRACKER — Google Apps Script
  * ===================================
  * INITIAL SETUP (already done):
- * - Deployed as Web App, URL saved in bodybuilding-tracker.html
+ * - Deployed as Web App, URL saved in health-tracker.html
  *
  * WITHINGS SETUP (one time, ~5 min):
  * 1. Go to account.withings.com → click your avatar → Developer Dashboard
