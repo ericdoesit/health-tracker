@@ -1428,7 +1428,7 @@ function renderMacros() {
     <div class="macro-box carbs"><div class="macro-box__val">${data.carbs}g</div><div class="macro-box__label">Carbs</div></div>
     <div class="macro-box fat"><div class="macro-box__val">${data.fat}g</div><div class="macro-box__label">Fat</div></div>`;
 
-  document.getElementById('macro-grid').innerHTML = gridHTML({ cal: p.cal, protein: p.protein, carbs: p.carbs, fat: p.fat });
+  document.getElementById('macro-grid').innerHTML = gridHTML(dayP);
   document.getElementById('day-macros').innerHTML = gridHTML(dayP);
 
   const target = currentPhase === 'cut' ? 250 : currentPhase === 'transition' ? 225 : 200;
